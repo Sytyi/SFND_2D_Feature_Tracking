@@ -123,7 +123,7 @@ int main(int argc, const char *argv[])
                 keypointsSize.push_back(pair<int,int>(beforeFilteringSize,keypoints.size()));
 
                 // optional : limit number of keypoints (helpful for debugging and learning)
-                bool bLimitKpts = true;
+                bool bLimitKpts = false;
                 if (bLimitKpts) {
                     int maxKeypoints = 50;
 
