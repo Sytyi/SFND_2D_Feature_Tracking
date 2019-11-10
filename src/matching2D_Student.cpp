@@ -208,7 +208,7 @@ double detKeypointsModern(std::vector<cv::KeyPoint> &keypoints, cv::Mat &img, st
         detector = cv::BRISK::create();
     }
     else if(detectorType.compare("ORB") == 0) {
-        detector = cv::ORB::create();
+        detector = cv::ORB::create(1500);
     }
     else if(detectorType.compare("AKAZE") == 0) {
         detector = cv::AKAZE::create();

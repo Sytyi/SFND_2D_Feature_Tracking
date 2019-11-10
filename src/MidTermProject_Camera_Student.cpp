@@ -123,7 +123,7 @@ int main(int argc, const char *argv[])
                 keypointsSize.push_back(pair<int,int>(beforeFilteringSize,keypoints.size()));
 
                 // optional : limit number of keypoints (helpful for debugging and learning)
-                bool bLimitKpts = false;
+                bool bLimitKpts = true;
                 if (bLimitKpts) {
                     int maxKeypoints = 50;
 
@@ -167,7 +167,7 @@ int main(int argc, const char *argv[])
                     cout << "#4 : MATCH KEYPOINT DESCRIPTORS done" << endl;
 
                     // visualize matches between current and previous image
-                    bVis = false;
+                    bVis = true;
                     if (bVis) {
                         cv::Mat matchImg = ((dataBuffer.end() - 1)->cameraImg).clone();
                         cv::drawMatches((dataBuffer.end() - 2)->cameraImg, (dataBuffer.end() - 2)->keypoints,
